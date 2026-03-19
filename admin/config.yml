@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: CentralSampTA/site-upcoming-content
+  branch: main
+
+# Immediate publishing, no drafts/approvals
+# Do NOT enable editorial_workflow
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "conference"
+    label: "Upcoming Conference"
+    files:
+      - label: "Upcoming Details"
+        name: "upcoming"
+        file: "content/upcoming.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Body", name: "body", widget: "markdown"}

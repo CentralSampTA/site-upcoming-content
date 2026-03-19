@@ -7,7 +7,7 @@ backend:
 # Do NOT enable editorial_workflow
 
 media_folder: "images"
-public_folder: "/images"
+public_folder: "https://raw.githubusercontent.com/CentralSampTA/site-upcoming-content/main/images"
 
 collections:
   - name: "conference"

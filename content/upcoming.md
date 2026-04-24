@@ -13,19 +13,51 @@ date: 2026-01-01
 </table>
 
 <h3>Organizing Committee</h3>
-<p><strong>General Chairs:</strong><br>
-Palina Salanevich (Utrecht University)<br>
-Sjoerd Dirksen (Utrecht University)</p>
+<h4>General Chairs</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Sjoerd Dirksen</td><td data-label="Institution:">Utrecht University</td></tr>
+</tbody>
+</table>
+</div>
 
-<p><strong>Local Organizers:</strong><br>
-Palina Salanevich (Utrecht University)<br>
-Sjoerd Dirksen (Utrecht University)<br>
-Tristan van Leeuwen (Utrecht University, CWI)<br>
-Francesca Bartolucci (TU Delft)<br>
-Geert Leus (TU Delft, Electrical Engineering)</p>
+<h4>Local Organizers</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Sjoerd Dirksen</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Tristan van Leeuwen</td><td data-label="Institution:">Utrecht University, CWI</td></tr>
+<tr><td>Francesca Bartolucci</td><td data-label="Institution:">TU Delft</td></tr>
+<tr><td>Geert Leus</td><td data-label="Institution:">TU Delft, Electrical Engineering</td></tr>
+</tbody>
+</table>
+</div>
 
-<p><strong>Tech Chairs:</strong><br>
-Helmut Boelcskei, Geert Leus, Piya Pal, Gerlind Plonka, Jose Luis Romero, Palina Salanevich</p>
+<h4>Technical Chairs</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Helmut Boelcskei</td><td data-label="Institution:">ETH Zurich</td></tr>
+<tr><td>Geert Leus</td><td data-label="Institution:">TU Delft, Electrical Engineering</td></tr>
+<tr><td>Piya Pal</td><td data-label="Institution:">UC San Diego, USA</td></tr>
+<tr><td>Gerlind Plonka</td><td data-label="Institution:">University of Göttingen, Germany</td></tr>
+<tr><td>Jose Luis Romero</td><td data-label="Institution:">University of Vienna and Austrian Academy of Sciences</td></tr>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 <!--more-->

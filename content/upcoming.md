@@ -6,29 +6,58 @@ date: 2026-01-01
 <div class="card">
 <h2 style="margin-top:0;">SampTA 27</h2>
 
-<!-- PLACEHOLDER IMAGE: Drop your image in static/images/sampta27-banner.jpg -->
-<p><img src="/images/sampta27-banner.jpg" alt="SampTA 27 Utrecht" style="width:100%; border-radius:6px; margin: 1rem 0; border: 1px solid var(--color-border-light);" onerror="this.style.display='none'"></p>
-
 <table style="border-collapse:collapse; margin:1rem 0;">
-<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Dates</td><td style="padding:0.4rem 0;">26-30.7.27</td></tr>
+<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Dates</td><td style="padding:0.4rem 0;">July 26-30, 2027</td></tr>
 <tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Location</td><td style="padding:0.4rem 0;">Utrecht</td></tr>
-<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Website</td><td style="padding:0.4rem 0;"><strong><a href="https://example.com" target="_blank" rel="noopener">Visit the Official SampTA 27 Website →</a></strong></td></tr>
+<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Website</td><td style="padding:0.4rem 0;">Official website coming soon.</td></tr>
 </table>
 
 <h3>Organizing Committee</h3>
-<p><strong>General Chairs:</strong><br>
-Palina Salanevich (Utrecht University)<br>
-Sjoerd Dirksen (Utrecht University)</p>
+<h4>General Chairs</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Sjoerd Dirksen</td><td data-label="Institution:">Utrecht University</td></tr>
+</tbody>
+</table>
+</div>
 
-<p><strong>Local Organizers:</strong><br>
-Palina Salanevich (Utrecht University)<br>
-Sjoerd Dirksen (Utrecht University)<br>
-Tristan van Leeuwen (Utrecht University, CWI)<br>
-Francesca Bartolucci (TU Delft)<br>
-Geert Leus (TU Delft, Electrical Engineering)</p>
+<h4>Local Organizers</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Sjoerd Dirksen</td><td data-label="Institution:">Utrecht University</td></tr>
+<tr><td>Tristan van Leeuwen</td><td data-label="Institution:">Utrecht University, CWI</td></tr>
+<tr><td>Francesca Bartolucci</td><td data-label="Institution:">TU Delft</td></tr>
+<tr><td>Geert Leus</td><td data-label="Institution:">TU Delft, Electrical Engineering</td></tr>
+</tbody>
+</table>
+</div>
 
-<p><strong>Tech Chairs:</strong><br>
-Helmut Boelcskei, Geert Leus, Piya Pal, Gerlind Plonka, Jose Luis Romero, Palina Salanevich</p>
+<h4>Technical Chairs</h4>
+<div class="committee-table-wrapper">
+<table class="committee-table">
+<thead>
+<tr><th>Name</th><th>Institution</th></tr>
+</thead>
+<tbody>
+<tr><td>Helmut Boelcskei</td><td data-label="Institution:">ETH Zurich</td></tr>
+<tr><td>Geert Leus</td><td data-label="Institution:">TU Delft, Electrical Engineering</td></tr>
+<tr><td>Piya Pal</td><td data-label="Institution:">UC San Diego, USA</td></tr>
+<tr><td>Gerlind Plonka</td><td data-label="Institution:">University of Göttingen, Germany</td></tr>
+<tr><td>Jose Luis Romero</td><td data-label="Institution:">University of Vienna and Austrian Academy of Sciences</td></tr>
+<tr><td>Palina Salanevich</td><td data-label="Institution:">Utrecht University</td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 <!--more-->

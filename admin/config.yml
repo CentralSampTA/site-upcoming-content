@@ -7,7 +7,7 @@ backend:
 # Do NOT enable editorial_workflow
 
 media_folder: "images"
-public_folder: "https://upcoming.sampta.org/images"
+public_folder: "https://site-upcoming-content.netlify.app/images"
 
 collections:
   - name: "conference"

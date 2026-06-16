@@ -1,0 +1,31 @@
+name: Trigger SampTA rebuild
+
+# When an editor publishes a change to the upcoming content (a push to main,
+# which is what the Decap CMS does on Publish), ping the Netlify build hook
+# for the main sampta.org site so it rebuilds and refetches this content.
+#
+# Freshness is guaranteed by the main site's hugo.toml, which disables the
+# getresource cache (maxAge = 0), so each rebuild pulls the latest state.
+#
+# Setup required once:
+#   1. In Netlify, on the sampta.org site: Site configuration ->
+#      Build & deploy -> Build hooks -> Add build hook. Copy the URL.
+#   2. In this repo: Settings -> Secrets and variables -> Actions ->
+#      New repository secret named NETLIFY_SAMPTA_BUILD_HOOK with that URL.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  rebuild-main-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Netlify build hook for sampta.org
+        run: |
+          if [ -z "${{ secrets.NETLIFY_SAMPTA_BUILD_HOOK }}" ]; then
+            echo "::error::NETLIFY_SAMPTA_BUILD_HOOK secret is not set. See workflow comments for setup."
+            exit 1
+          fi
+          curl -fsSL -X POST -d '{}' "${{ secrets.NETLIFY_SAMPTA_BUILD_HOOK }}"
+          echo "Triggered a rebuild of the main SampTA site."

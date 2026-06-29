@@ -9,7 +9,7 @@ date: 2026-01-01
 <table style="border-collapse:collapse; margin:1rem 0;">
 <tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Dates</td><td style="padding:0.4rem 0;">July 26-30, 2027</td></tr>
 <tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Location</td><td style="padding:0.4rem 0;">Utrecht</td></tr>
-<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Website</td><td style="padding:0.4rem 0;">Official website coming soon.</td></tr>
+<tr><td style="padding:0.4rem 1.5rem 0.4rem 0; font-weight:600; color:var(--color-primary);">Website</td><td style="padding:0.4rem 0;"><a href="https://www.uu.nl/en/research/sampta27" target="_blank" rel="noopener">Official conference website</a></td></tr>
 </table>
 
 <h3>Organizing Committee</h3>

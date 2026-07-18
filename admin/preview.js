@@ -1,3 +1,25 @@
+/* ============================================================
+   SampTA — Organizers' CMS preview (upcoming conference)
+   ------------------------------------------------------------
+   Renders the CMS preview using the SAME stylesheet and markup
+   structure as the live site, so organizers see what visitors
+   will actually get. Kept deliberately consistent with the
+   master admin preview in the SampTA repo.
+
+   Notes for maintainers:
+   - We load the LIVE production stylesheet (from sampta.org) so
+     the preview matches production, not a generic reset.
+   - The live /upcoming/ page renders the body inside
+     <main><div class="container"><div class="content-body">…
+     (see the SampTA repo: layouts/upcoming/single.html). The
+     front-matter title is NOT shown on the page, so we don't
+     render it here either — this keeps the preview honest.
+   - Keep tables and other raw HTML in "Markdown" mode; the
+     rich-text editor can mangle raw HTML.
+   ============================================================ */
+
+var SITE_CSS = "https://sampta.org/css/style.css";
+
 function normalizeUrl(value) {
   return String(value || '').replace(/[\u0000-\u0020\u007f\s]+/g, '').toLowerCase();
 }
@@ -52,39 +74,40 @@ function sanitizeHtml(html) {
   return template.innerHTML;
 }
 
-const UpcomingPreview = createClass({
-  render: function() {
-    const entry = this.props.entry;
-    const title = entry.getIn(['data', 'title']) || '';
-    const body = entry.getIn(['data', 'body']) || '';
+// A small, clearly-marked editor hint. Inline-styled so it never
+// depends on (or is restyled by) the site CSS, and so it can't be
+// mistaken for page content.
+function editorHint() {
+  return h('div', {
+    style: {
+      position: 'sticky', top: 0, zIndex: 20,
+      background: '#fff8db', borderBottom: '1px solid #e6d97a',
+      color: '#5c4d00', font: '13px/1.45 system-ui, -apple-system, sans-serif',
+      padding: '8px 14px'
+    }
+  }, 'Editor preview — this narrow pane triggers the site’s mobile layout; the live desktop site is wider. The Title field is used as metadata and is not shown on the page. Keep any tables/raw HTML in “Markdown” mode.');
+}
 
-    // Render the raw markdown body out into HTML just like Hugo does
+const UpcomingPreview = createClass({
+  render: function () {
+    const entry = this.props.entry;
+    const body = entry.getIn(['data', 'body']) || '';
     const htmlBody = sanitizeHtml(marked.parse(body));
 
-    // Render a structure very similar to the main site's CSS layout for accurate visualization
-    return h('div', { 
-      style: { 
-        fontFamily: 'system-ui, -apple-system, sans-serif',
-        lineHeight: '1.6',
-        color: '#334155',
-        padding: '2rem'
-      } 
-    },
-      h('div', {
-        style: {
-          backgroundColor: '#fff',
-          borderRadius: '12px',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-          padding: '2rem',
-          borderTop: '4px solid #1a365d'
-        }
-      },
-        h('h2', { style: { marginTop: 0, color: '#1a365d', borderBottom: '1px solid #e2e8f0', paddingBottom: '0.5rem' } }, title),
-        h('div', { dangerouslySetInnerHTML: { __html: htmlBody } })
+    return h('div', {},
+      editorHint(),
+      // Mirror layouts/upcoming/single.html on the main site.
+      h('main', {},
+        h('div', { className: 'container' },
+          h('div', { className: 'content-body' },
+            h('div', { dangerouslySetInnerHTML: { __html: htmlBody } })
+          )
+        )
       )
     );
   }
 });
 
-CMS.registerPreviewStyle("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+// Load the LIVE site stylesheet so the preview matches production.
+CMS.registerPreviewStyle(SITE_CSS);
 CMS.registerPreviewTemplate("upcoming", UpcomingPreview);

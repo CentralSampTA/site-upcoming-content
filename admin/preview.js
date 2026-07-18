@@ -81,11 +81,15 @@ function editorHint() {
   return h('div', {
     style: {
       position: 'sticky', top: 0, zIndex: 20,
-      background: '#fff8db', borderBottom: '1px solid #e6d97a',
-      color: '#5c4d00', font: '13px/1.45 system-ui, -apple-system, sans-serif',
-      padding: '8px 14px'
+      display: 'flex', gap: '9px', alignItems: 'flex-start',
+      background: '#fffaf0', borderBottom: '1px solid #ecd9a8',
+      color: '#6b5416', font: '12.5px/1.5 system-ui, -apple-system, sans-serif',
+      padding: '9px 76px 9px 16px'
     }
-  }, 'Editor preview — this narrow pane triggers the site’s mobile layout; the live desktop site is wider. The Title field is used as metadata and is not shown on the page. Keep any tables/raw HTML in “Markdown” mode.');
+  },
+    h('span', { 'aria-hidden': 'true', style: { color: '#b7791f', fontWeight: 700, flex: '0 0 auto' } }, 'ⓘ'),
+    h('span', {}, 'Preview — the pane width can differ from a visitor’s screen, so responsive parts may look different here than on the live site. The Title field is metadata and isn’t shown on the page. Keep any tables/raw HTML in “Markdown” mode.')
+  );
 }
 
 const UpcomingPreview = createClass({

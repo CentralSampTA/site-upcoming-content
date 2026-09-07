@@ -4,6 +4,7 @@ date: 2026-01-01
 ---
 
 <section class="event-summary">
+<p class="event-banner"><img src="/images/sampta27-banner.png" alt="SampTA 2027 — Sampling Theory and Applications, Utrecht, the Netherlands, July 26–30, 2027" width="1920" height="767"></p>
 <p class="event-kicker">SampTA 27</p>
 <h2>16th International Conference on Sampling Theory and Applications</h2>
 

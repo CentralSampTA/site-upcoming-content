@@ -20,7 +20,7 @@ date: 2026-01-01
 <div>
 <dt>Next deadline</dt>
 <dd class="next-deadline" data-empty-label="See official site for current registration and logistics">
-<span class="deadline-value">Invited session proposals: September 13, 2026</span>
+<span class="deadline-value">Paper submission: January 31, 2027</span>
 <span class="deadline-options" hidden>
 <span data-date="2026-09-13">Invited session proposals: September 13, 2026</span>
 <span data-date="2026-10-05">Invited session acceptance notice: October 5, 2026</span>
